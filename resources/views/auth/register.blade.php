@@ -26,10 +26,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Cedula') }}</label>
+                            <label for="cedula" class="col-md-4 col-form-label text-md-right">{{ __('Cedula') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('cedula') is-invalid @enderror" name="cedula" value="{{ old('cedula') }}" required autocomplete="name" autofocus>
+                                <input id="cedula" type="text" class="form-control @error('cedula') is-invalid @enderror" name="cedula" value="{{ old('cedula') }}" required autocomplete="cedula" autofocus>
 
                                 @error('cedula')
                                     <span class="invalid-feedback" role="alert">
@@ -39,6 +39,20 @@
                             </div>
                         </div>
                         
+                        <div class="form-group row">
+                            <label for="usuario" class="col-md-4 col-form-label text-md-right">{{ __('Usuario') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="usuario" type="text" class="form-control @error('usuario') is-invalid @enderror" name="usuario" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
+
+                                @error('usuario')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
